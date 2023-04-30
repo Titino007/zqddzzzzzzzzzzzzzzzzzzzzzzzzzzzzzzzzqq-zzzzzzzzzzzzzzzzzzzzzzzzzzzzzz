@@ -1,0 +1,1208 @@
+--https://www.roblox.com/games/12980045478/Wall-Smash-Simulator
+
+
+
+local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/QpqgggTC'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Project Kitten  v0.0.0.0",
+   LoadingTitle = "Jehno#4316",
+   LoadingSubtitle = "Loading Script Pls wait...",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, 
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "EV9SkQ3bPx", 
+      RememberJoins = true 
+   },
+   KeySystem = false, 
+   KeySettings = {
+      Title = "Project-Kitten",
+      Subtitle = "Go to https://discord.gg/EV9SkQ3bPx To get ur key",
+      Note = "Go to https://discord.gg/EV9SkQ3bPx",
+      FileName = "Key", 
+      SaveKey = false, 
+      GrabKeyFromSite = false, 
+      Key = {"ProjectKittenIsGood"} 
+   }
+})
+
+local Tab = Window:CreateTab("Train Tab") 
+
+local Section = Tab:CreateSection("Random Things")
+
+local isToggled = false 
+local speed = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Rebirth",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      
+      
+      isToggled = Value 
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+
+local function loopEvent()
+   while isToggled do 
+      wait(speed) 
+      local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
+   end
+end
+
+
+Toggle.Callback = function(Value)
+   isToggled = Value 
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local speed = 0.01 
+
+-- Create the button
+local Button = Tab:CreateButton({
+   Name = "Buy all pickaxe that u can buy",
+   Callback = function()
+      
+      local args = {
+         [1] = "Red"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Blue"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Green"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Yellow"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Winter"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Cactus"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Mine"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Lava"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Galaxy"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Pixel"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Jungle"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Sakura"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+      wait(speed)
+
+      args = {
+         [1] = "Angelic"
+      }
+      game:GetService("ReplicatedStorage").Events.Glove:InvokeServer(unpack(args))
+   end,
+})
+
+
+
+local Section = Tab:CreateSection("Train-Section")
+
+local isToggled = false 
+local speed = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist starter area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      
+      
+      isToggled = Value 
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+
+local function loopEvent()
+   while isToggled do 
+      wait(speed) 
+      local args = {
+         [1] = workspace.Box["1"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.01 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 1 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["2"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 2 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["3"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 3 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["4"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 4 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["5"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 5 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["6"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 6 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["7"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 7 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["8"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 8 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["9"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Train-Fist 9 area",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = workspace.Box["10"].Model
+      }
+      game:GetService("ReplicatedStorage").Events.Box:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local Tab = Window:CreateTab("GoodThing") -- Title, Image
+
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Equip Best pet",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+      local args = {
+         [1] = "EquipBest"
+      }
+      game:GetService("ReplicatedStorage").PetSystem.SystemEquipButon:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+local Section = Tab:CreateSection("AutoHatch")
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-Starter area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 1"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-1 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 2"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-2 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 3"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-3 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 4"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-4 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 5"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-5 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 6"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-6 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 7"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-7 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 8"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-8 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 9"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+local isToggled = false -- Keep track of toggle state
+local speed = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 -- Initialize speed to 0.01
+
+-- Create the toggle
+local Toggle = Tab:CreateToggle({
+   Name = "Auto-Hatch-9 area Egg",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+      -- The function that takes place when the toggle is pressed
+      -- The variable (Value) is a boolean on whether the toggle is true or false
+      isToggled = Value -- Update the toggle state variable
+      print("Toggle state changed to " .. tostring(Value))
+   end,
+})
+
+-- Function to loop the event
+local function loopEvent()
+   while isToggled do -- Check the toggle state variable to see if the loop should continue running
+      wait(speed) -- Wait for the specified speed
+local args = {
+    [1] = workspace.Pet["Zone 10"],
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Events.OpenPet:FireServer(unpack(args))
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+-- Start the loop when the toggle is turned on
+Toggle.Callback = function(Value)
+   isToggled = Value -- Update the toggle state variable
+   print("Toggle state changed to " .. tostring(Value))
+   if Value then
+      loopEvent()
+   end
+end
+
+
+
+
+
+local Tab = Window:CreateTab("Teleport Tab/AutoFarm") -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to starter area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-68.5224, 5, -388.865)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 1 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-67.9952, 4.34632, -263.536)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 2 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-68.8649, 4.34632, -149.906)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 3 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-66.4999, 4.34631, -34.127)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 4 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-69.4162, 4.3463, 81.7644)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 5 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-68.4728, 4.34632, 196.265)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 6 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-69.3399, 4.34631, 313.749)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 7 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-68.21, 4.34631, 428.06)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 8 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-67.5381, 4.34632, 535.496)
+         end
+      end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to 9 area",
+   Callback = function()
+      -- The function that takes place when the button is pressed
+      local player = game.Players.LocalPlayer
+      local character = player.Character
+
+      if character then
+         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+         if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(-69.4298, 4.34632, 648.797)
+         end
+      end
+   end,
+})
+
