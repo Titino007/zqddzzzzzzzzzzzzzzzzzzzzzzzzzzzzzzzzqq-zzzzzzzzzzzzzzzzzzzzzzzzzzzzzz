@@ -1044,7 +1044,7 @@ end
 
 
 
-local Tab = Window:CreateTab("Teleport Tab/AutoFarm") -- Title, Image
+local Tab = Window:CreateTab("Teleport Tab") -- Title, Image
 
 local Button = Tab:CreateButton({
    Name = "Teleport to starter area",
